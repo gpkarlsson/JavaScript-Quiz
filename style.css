@@ -14,12 +14,13 @@ body {
     align-items: center;
 }
 
-#questionContainer {
+#questionsContainer {
     width: 800px;
     max-width: 80%;
     background-color: white;
     border-radius: 5px;
     padding: 10px;
+    justify-content: center;
 }
 
 .buttonGrid {
