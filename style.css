@@ -13,3 +13,44 @@ body {
     justify-content: center;
     align-items: center;
 }
+
+#questionContainer {
+    width: 800px;
+    max-width: 80%;
+    background-color: white;
+    border-radius: 5px;
+    padding: 10px;
+}
+
+.buttonGrid {
+    display: grid;
+    grid-template-columns: repeat(2, auto);
+    gap: 10px;
+    margin: 20px 0;
+}
+
+.btn {
+    padding: 5px 10px;
+    background-color: blueviolet;
+    border-radius: 5px;
+    font-size: 1.5rem;
+}
+
+.btn:hover {
+    border: 10px black;
+}
+
+.startBtn, .nextBtn {
+    font-size: 2rem;
+    padding: 10px 20px;
+}
+
+.controls {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.hide {
+    display: none;
+}
