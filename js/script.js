@@ -13,7 +13,11 @@ const questionsContainerEl = document.getElementById('questionsDiv');
 
 const questionEl = document.getElementById('question');
 const answerButtonEl = document.getElementById('answerButton');
+
 var timer = 45;
+var countdown = document.getElementById('timer');
+//var timerId = setInterval()
+
 
 let randomQuestions, currentQuestionIndex;
 var correctAnswers = 0
@@ -36,7 +40,20 @@ nextQuestion()
 
 }
 
+// timer not counting down
+function myTimer() {
+   var timerId = setInterval(function() {       
+    }, 1000)
+}
 
+if (timer > 0) {
+ timer--;
+} else {
+    timer = 0;
+ clearInterval(timerId);
+ // run a function that happens when quiz is over
+}
+console.log(timer);
 
 function nextQuestion() {
     stateReset()
