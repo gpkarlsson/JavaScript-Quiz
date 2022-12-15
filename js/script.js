@@ -7,9 +7,6 @@
 // 5. Game over when questions answered or timer reaches zero
 // 6. Save initials and score at the end
 
-
-
-
 const buttonStart = document.getElementById('buttonStart');
 const buttonNext = document.getElementById('nextButton');
 const questionsContainerEl = document.getElementById('questionsDiv');
@@ -57,7 +54,7 @@ function stateReset() {
 }
 
 
-function choiceAnswer(e) {
+function answer(e) {
 
 }
 
