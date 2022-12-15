@@ -48,7 +48,6 @@ function myTimer() {
         clearInterval(timer);
         // run a function that happens when quiz is over
        }
-   
 }
 setInterval(myTimer, 1000);
 
