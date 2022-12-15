@@ -1,6 +1,6 @@
-// 1. Initilize quiz from Start button
-// 2. Display first question
-//      2.a. Display answers
+// 1. Initilize quiz from Start button --done
+// 2. Display first question --done
+//      2.a. Display answers --done
 // 3. Start 45second timer
 // 4. Display correct or incorrect when answer chosen
 //    4.a. If incorrect answer chosen, subtract 5 seconds from clock
@@ -13,10 +13,10 @@ const questionsContainerEl = document.getElementById('questionsDiv');
 
 const questionEl = document.getElementById('question');
 const answerButtonEl = document.getElementById('answerButton');
-var score = 0;
 var timer = 45;
 
 let randomQuestions, currentQuestionIndex;
+var correctAnswers = 0
 
 buttonStart.addEventListener('click', startQuiz);
 nextButton.addEventListener('click', () => {
@@ -33,7 +33,10 @@ randomQuestions = questions.sort(() => Math.random() - .5)
 currentQuestionIndex = 0
 questionsContainerEl.classList.remove('hide');
 nextQuestion()
+
 }
+
+
 
 function nextQuestion() {
     stateReset()
@@ -55,10 +58,14 @@ function displayQuestion(question) {
     });
 };
 
-// Function to show whether chosen answer is correct
+// Show whether chosen answer is correct and increase score with each correct answer
 function choiceAnswer(e) {
     const buttonSelected = e.target
     const correct = buttonSelected.dataset.correct
+    if (correct) {
+        correctAnswers++;
+        console.log(correctAnswers);
+    }
     setStatusClass(document.body, correct)
     Array.from(answerButtonEl.children).forEach(button => {
         setStatusClass(button, button.dataset.correct)
@@ -71,7 +78,7 @@ function choiceAnswer(e) {
     }
 }
 
-// sets correct or wrong class depending on whether answer was correct or not
+// Sets correct or wrong class depending on whether answer was correct or not
 function setStatusClass(element, correct) {
     clearStatusClass(element)
     if (correct) {
@@ -81,13 +88,13 @@ function setStatusClass(element, correct) {
     }
 }
 
-// resets correct or wrong class for the next question
+// Resets correct or wrong class for the next question
 function clearStatusClass(element) {
     element.classList.remove('correct')
     element.classList.remove('wrong')
 }
 
-// resets quiz UI between each question 
+// Resets quiz UI between each question 
 function stateReset() {
     clearStatusClass(document.body)
    buttonNext.classList.add('hide')
@@ -96,7 +103,7 @@ function stateReset() {
    }
 }
 
-// questions for quiz
+// Questions for quiz
 const questions = [
     {
         question: 'What is the proper way to name things in JavaScript?',
@@ -138,7 +145,3 @@ const questions = [
         ]
     }
 ];
-
-if (answerChoice.correct == true) {
-    score++;
-}
