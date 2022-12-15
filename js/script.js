@@ -37,22 +37,22 @@ randomQuestions = questions.sort(() => Math.random() - .5)
 currentQuestionIndex = 0
 questionsContainerEl.classList.remove('hide');
 nextQuestion()
-
 }
 
 // timer not counting down
 function myTimer() {
-   var timerId = setInterval(function() {       
-    }, 1000)
+    if (timer > 0) {
+        timer--;
+       } else {
+           timer = 0;
+        clearInterval(timer);
+        // run a function that happens when quiz is over
+       }
+   
 }
+setInterval(myTimer, 1000);
 
-if (timer > 0) {
- timer--;
-} else {
-    timer = 0;
- clearInterval(timer);
- // run a function that happens when quiz is over
-}
+
 console.log(timer);
 
 function nextQuestion() {
