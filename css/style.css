@@ -40,9 +40,14 @@ body {
     border: 10px black;
 }
 
-.startBtn, .nextBtn {
+.startBtn, .nextBtn, .scoreBtn {
     font-size: 2rem;
     padding: 10px 20px;
+}
+
+#highScore a {
+    text-decoration: none;
+    color: black;
 }
 
 .controls {
@@ -53,4 +58,14 @@ body {
 
 .hide {
     display: none;
+}
+
+/* if correct answer is chosen, background will change to green*/
+.correct {
+    background-color: green;
+}
+/* if wrong answer is chosen, background will change to red*/
+
+.wrong {
+    background-color: red;
 }
