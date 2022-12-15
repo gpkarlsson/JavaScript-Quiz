@@ -16,7 +16,7 @@ const answerButtonEl = document.getElementById('answerButton');
 
 var timer = 45;
 var countdown = document.getElementById('timer');
-//var timerId = setInterval()
+
 
 
 let randomQuestions, currentQuestionIndex;
