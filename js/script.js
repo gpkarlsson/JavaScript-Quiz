@@ -14,7 +14,7 @@ const questionsContainerEl = document.getElementById('questionsDiv');
 const questionEl = document.getElementById('question');
 const answerButtonEl = document.getElementById('answerButton');
 
-var timer = 45;
+var timer = 30;
 var countdown = document.getElementById('timer');
 
 
@@ -50,7 +50,7 @@ if (timer > 0) {
  timer--;
 } else {
     timer = 0;
- clearInterval(timerId);
+ clearInterval(timer);
  // run a function that happens when quiz is over
 }
 console.log(timer);
