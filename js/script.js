@@ -1,11 +1,11 @@
 // 1. Initilize quiz from Start button --done
 // 2. Display first question --done
 //      2.a. Display answers --done
-// 3. Start 45second timer
-// 4. Display correct or incorrect when answer chosen
-//    4.a. If incorrect answer chosen, subtract 5 seconds from clock
+// 3. Start 30second timer --done
+// 4. Display correct or incorrect when answer chosen --done
+//    4.a. If incorrect answer chosen, subtract 5 seconds from clock --done
 // 5. Game over when questions answered or timer reaches zero
-// 6. Save initials and score at the end
+// 6. Save initials and score at the end (high score page)
 
 const buttonStart = document.getElementById('buttonStart');
 const buttonNext = document.getElementById('nextButton');
@@ -81,9 +81,8 @@ function choiceAnswer(e) {
         correctAnswers++;
         console.log(correctAnswers);   
     } else {
-        //wrong consequences here
-        // -5sec
-    }
+        timer -= 5;
+    };
 
     // happens every time
 
