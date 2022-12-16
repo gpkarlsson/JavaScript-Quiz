@@ -17,8 +17,6 @@ const answerButtonEl = document.getElementById('answerButton');
 var timer = 30;
 var countdown = document.getElementById('timer');
 
-
-
 let randomQuestions, currentQuestionIndex;
 var correctAnswers = 0
 
@@ -45,15 +43,14 @@ function myTimer() {
         timer--;
        } else {
            timer = 0;
+           //function call to new timer 
+           // 
         clearInterval(timer);
         // run a function that happens when quiz is over
        }
        console.log(timer);
 }
 setInterval(myTimer, 1000);
-
-
-
 
 function nextQuestion() {
     stateReset()
@@ -79,10 +76,17 @@ function displayQuestion(question) {
 function choiceAnswer(e) {
     const buttonSelected = e.target
     const correct = buttonSelected.dataset.correct
+    
     if (correct) {
         correctAnswers++;
-        console.log(correctAnswers);
+        console.log(correctAnswers);   
+    } else {
+        //wrong consequences here
+        // -5sec
     }
+
+    // happens every time
+
     setStatusClass(document.body, correct)
     Array.from(answerButtonEl.children).forEach(button => {
         setStatusClass(button, button.dataset.correct)
