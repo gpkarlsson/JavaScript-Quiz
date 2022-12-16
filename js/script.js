@@ -20,8 +20,6 @@ var userScore = correctAnswers;
 
 
 var timer = 30;
-var countdown = document.getElementById('timer');
-countdown.textContent = timer; //timer displays but does not reduce
 
 let randomQuestions, currentQuestionIndex;
 var correctAnswers = 0
@@ -52,8 +50,8 @@ function myTimer() {
         clearInterval(timer);
         //gameOver();
        }
-       console.log(timer);
-       
+       var countdown = document.getElementById('timer');
+       countdown.textContent = timer; 
 }
 setInterval(myTimer, 1000);
 

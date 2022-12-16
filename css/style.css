@@ -90,3 +90,8 @@ body {
     font-size: 20px;
     color: white;
 }
+
+#game-over h2 {
+    display:flex;
+    justify-content: flex-start;
+}
