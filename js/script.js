@@ -48,11 +48,12 @@ function myTimer() {
         clearInterval(timer);
         // run a function that happens when quiz is over
        }
+       console.log(timer);
 }
 setInterval(myTimer, 1000);
 
 
-console.log(timer);
+
 
 function nextQuestion() {
     stateReset()
