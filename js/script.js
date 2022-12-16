@@ -10,9 +10,14 @@
 const buttonStart = document.getElementById('buttonStart');
 const buttonNext = document.getElementById('nextButton');
 const questionsContainerEl = document.getElementById('questionsDiv');
+var buttonHighScores = document.getElementById('highScore');
+var highscoreDiv = document.getElementById('highscoreDiv')
 
 const questionEl = document.getElementById('question');
 const answerButtonEl = document.getElementById('answerButton');
+var gameOver = document.getElementById('game-over');
+var userScore = correctAnswers;
+
 
 var timer = 30;
 var countdown = document.getElementById('timer');
@@ -25,7 +30,6 @@ buttonStart.addEventListener('click', startQuiz);
 nextButton.addEventListener('click', () => {
     currentQuestionIndex++
     nextQuestion()
-  
 });
 
 //Start Quiz
@@ -39,17 +43,14 @@ questionsContainerEl.classList.remove('hide');
 nextQuestion()
 }
 
-
-
 function myTimer() {
     if (timer > 0) {
         timer--;
        } else {
-           timer <= 0;
+           timer = 0;
            //function call to new timer 
-           // 
         clearInterval(timer);
-        // run a function that happens when quiz is over
+        gameOver();
        }
        console.log(timer);
        
@@ -99,6 +100,7 @@ function choiceAnswer(e) {
     } else {
         buttonStart.innerText = 'Restart'
         buttonStart.classList.remove('hide');
+        buttonHighScores.classList.remove('hide');
     }
 }
 
@@ -125,6 +127,13 @@ function stateReset() {
    while (answerButtonEl.firstChild) {
     answerButtonEl.removeChild(answerButtonEl.firstChild)
    }
+}
+
+if (countdown == 0) {
+    function gameOver() {
+        gameOver.classList.remove('hide');
+        localStorage.setItem();
+    }
 }
 
 // Questions for quiz

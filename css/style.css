@@ -79,3 +79,14 @@ body {
 .wrong {
     background-color: red;
 }
+
+#h1score {
+   position: absolute;
+   top: 0;
+   color: white;
+}
+
+#initials {
+    font-size: 20px;
+    color: white;
+}
