@@ -50,7 +50,7 @@ function myTimer() {
            timer = 0;
            //function call to new timer 
         clearInterval(timer);
-        gameOver();
+        //gameOver();
        }
        console.log(timer);
        
@@ -129,12 +129,11 @@ function stateReset() {
    }
 }
 
-if (countdown == 0) {
-    function gameOver() {
-        gameOver.classList.remove('hide');
-        localStorage.setItem();
-    }
-}
+
+    // function gameOver() {
+    //     gameOver.classList.remove('hide');
+    //     localStorage.setItem();
+    // }
 
 // Questions for quiz
 const questions = [
