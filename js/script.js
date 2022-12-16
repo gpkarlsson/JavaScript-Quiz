@@ -16,6 +16,7 @@ const answerButtonEl = document.getElementById('answerButton');
 
 var timer = 30;
 var countdown = document.getElementById('timer');
+countdown.textContent = timer; //timer displays but does not reduce
 
 let randomQuestions, currentQuestionIndex;
 var correctAnswers = 0
@@ -24,6 +25,7 @@ buttonStart.addEventListener('click', startQuiz);
 nextButton.addEventListener('click', () => {
     currentQuestionIndex++
     nextQuestion()
+  
 });
 
 //Start Quiz
@@ -37,18 +39,20 @@ questionsContainerEl.classList.remove('hide');
 nextQuestion()
 }
 
-// timer not counting down
+
+
 function myTimer() {
     if (timer > 0) {
         timer--;
        } else {
-           timer = 0;
+           timer <= 0;
            //function call to new timer 
            // 
         clearInterval(timer);
         // run a function that happens when quiz is over
        }
        console.log(timer);
+       
 }
 setInterval(myTimer, 1000);
 
