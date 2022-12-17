@@ -18,7 +18,6 @@ const answerButtonEl = document.getElementById('answerButton');
 var gameOver = document.getElementById('game-over');
 var userScore = correctAnswers;
 
-
 var timer = 30;
 
 let randomQuestions, currentQuestionIndex;
@@ -32,7 +31,6 @@ nextButton.addEventListener('click', () => {
 
 //Start Quiz
 function startQuiz() {
-console.log('started');
 buttonStart.classList.add('hide');
 highScore.classList.add('hide');
 randomQuestions = questions.sort(() => Math.random() - .5)
@@ -41,20 +39,22 @@ questionsContainerEl.classList.remove('hide');
 nextQuestion()
 }
 
+//30 second timer for quiz
+
 function myTimer() {
     if (timer > 0) {
         timer--;
        } else {
            timer = 0;
-           //function call to new timer 
         clearInterval(timer);
-        //gameOver();
+        return 0;
        }
        var countdown = document.getElementById('timer');
        countdown.textContent = timer; 
 }
 setInterval(myTimer, 1000);
 
+// Display 
 function nextQuestion() {
     stateReset()
     displayQuestion(randomQuestions[currentQuestionIndex])
@@ -126,12 +126,6 @@ function stateReset() {
     answerButtonEl.removeChild(answerButtonEl.firstChild)
    }
 }
-
-
-    // function gameOver() {
-    //     gameOver.classList.remove('hide');
-    //     localStorage.setItem();
-    // }
 
 // Questions for quiz
 const questions = [
