@@ -1,33 +1,41 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
+
+<head>
     <meta charset="utf-8">
     <title>JavaScript Quiz</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">    
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="./css/style.css">
-    </head>
-    <body>
-      <div class="container">
+</head>
+
+<body>
+    <div id="timer"></div>
+    <div class="container">
         <div id="questionsDiv" class="hide">
             <div id="question">Question</div>
             <div id="answerButton" class="buttonGrid">
                 <button class="btn">Answer 1</button>
                 <button class="btn">Answer 2</button>
                 <button class="btn">Answer 3</button>
-                <button class="btn">Answer 4</button>      
-                </div>
-                </div>
-            <div class="controls">
-                <button id="buttonStart" class="startBtn btn">Start</button>
-                <button id="nextButton" class="nextBtn btn hide">Next</button>
-                <button id="highScore" class="scoreBtn btn"><a href="scores.html">High Scores</a>
+                <button class="btn">Answer 4</button>
             </div>
         </div>
-        <div id="timer"></div>
-        <div id="user-score" class="hide">Display Score</div>
+        <div class="controls">
+            <button id="buttonStart" class="startBtn btn">Start</button>
+            <button id="nextButton" class="nextBtn btn hide">Next</button>
+        </div>
         <div id="game-over" class="hide">
             <h2>Game Over</h2>
         </div>
-    <script defer src="./js/script.js"></script>
-    </body>
+        <div id="score" class="hide">
+            <div id="yourscore">Your Score</div>
+            <div id="currentScore"></div>
+            <label id="initials" for="name">Enter Your Initials</label>
+            <input type="text" id="name" name="name" required></input>
+            <button id="submit" type="button">Submit</button>
+        </div>
+        <div id="submittedScores" class="hide"></div>
+        <script defer src="./js/script.js"></script>
+</body>
+
 </html>
