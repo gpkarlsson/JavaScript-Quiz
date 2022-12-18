@@ -8,5 +8,5 @@ https://gpkarlsson.github.io/JavaScript-Quiz/
 
 ## Screenshot
 ```md
-![A screenshot of one of the questions in a quiz about JavaScript](http://full/path/to/img.jpg)
+![A screenshot of one of the questions in a quiz about JavaScript](https://raw.githubusercontent.com/gpkarlsson/JavaScript-Quiz/main/Screenshot.png)
 ```
