@@ -7,6 +7,4 @@ This project is a quiz on JavaScript made with HTML, JavaScript, and CSS. The mo
 https://gpkarlsson.github.io/JavaScript-Quiz/
 
 ## Screenshot
-```md
-![A screenshot of one of the questions in a quiz about JavaScript](https://raw.githubusercontent.com/gpkarlsson/JavaScript-Quiz/main/Screenshot.png)
-```
+https://github.com/gpkarlsson/JavaScript-Quiz/blob/main/Screenshot.png
