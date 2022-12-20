@@ -8,3 +8,6 @@ https://gpkarlsson.github.io/JavaScript-Quiz/
 
 ## Screenshot
 https://github.com/gpkarlsson/JavaScript-Quiz/blob/main/Screenshot.png
+
+## License
+MIT License
